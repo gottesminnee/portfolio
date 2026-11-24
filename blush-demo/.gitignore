@@ -1,0 +1,18 @@
+.DS_Store
+**/.DS_Store
+
+# Java / Maven
+backend/target/
+*.class
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# Secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+**/application-local.properties

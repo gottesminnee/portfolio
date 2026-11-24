@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUSH CLUB admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <section class="login-screen" id="login-screen">
+        <div class="login-card">
+            <a href="index.html" class="logo">BLUSH CLUB</a>
+            <p class="eyebrow">private access</p>
+            <h1>welcome <em>back</em></h1>
+            <p class="login-description">вход в панель управления</p>
+
+            <form id="login-form">
+                <label>
+                    ЛОГИН
+                    <input id="login" value="admin" required>
+                </label>
+
+                <label>
+                    ПАРОЛЬ
+                    <input id="password" type="password"
+                           placeholder="Введите пароль" required>
+                </label>
+
+                <button type="submit">ВОЙТИ</button>
+                <p id="login-error"></p>
+            </form>
+        </div>
+    </section>
+
+    <div id="admin-panel" hidden>
+        <header class="header">
+            <a href="index.html" class="logo">BLUSH<span>CLUB</span></a>
+            <div>
+                <span class="admin-label">ADMINISTRATION</span>
+                <button id="logout">ВЫЙТИ</button>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="welcome">
+                <p class="eyebrow">admin panel</p>
+                <h1>order <em>management˖ ᡣ𐭩 ⊹</em></h1>
+                <p>управление заказами BLUSH CLUB</p>
+            </section>
+
+            <section class="stats">
+                <div class="stat">
+                    <span>ВСЕ ЗАКАЗЫ</span>
+                    <strong id="total-orders">0</strong>
+                </div>
+                <div class="stat">
+                    <span>НОВЫЕ</span>
+                    <strong id="new-orders">0</strong>
+                </div>
+                <div class="stat">
+                    <span>ВЫРУЧКА</span>
+                    <strong id="revenue">0 ₽</strong>
+                </div>
+            </section>
+
+            <section class="orders-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">CUSTOMER REQUESTS</p>
+                        <h2>заказы</h2>
+                    </div>
+                    <button onclick="loadOrders()">ОБНОВИТЬ ↻</button>
+                </div>
+
+                <div id="orders" class="orders">
+                    <p>загрузка заказов...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
