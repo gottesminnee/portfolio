@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>портфолио</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="explorer">
+  <header class="titlebar">
+    <span class="tb-btn" aria-hidden="true"></span>
+    <span class="title">portfolio</span>
+    <span class="tb-group" aria-hidden="true"><span class="tb-btn tb-btn--up"></span><span class="tb-btn tb-btn--down"></span></span>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Разделы">
+    <button class="tab is-active" role="tab" aria-selected="true" data-tab="home">main</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="projects">my projects</button>
+  </nav>
+
+  <div class="explorer-body">
+    <section class="files retro-scroll" id="files" data-view="home" aria-label="Рабочая область">
+      <div class="folders" id="folders"></div>
+
+      <div class="experience">
+        <h2 class="label">опыт: разработка программных модулей и систем, проектирование баз данных, SSH Remote Access, аналитика проделанной работы, визуальное проектирование интерфейсов, обучение персонала, отчётность и документирование, анализ проблем и факторов, которые можно оптимизировать и
+улучшить, работа небольшой опыт продаж, работа с клиентами, решение нестандартных задач</h2>
+        <div class="field field--text" data-field="experience"></div>
+      </div>
+      <div class="signature field" data-field="signature"></div>
+
+      <section class="window about" id="about" aria-label="about_me.txt">
+        <header class="titlebar">
+          <button class="tb-btn" data-action="close" aria-label="Закрыть" title="Закрыть"></button>
+          <span class="title">about_me.txt</span>
+          <span class="tb-group">
+            <button class="tb-btn tb-btn--up" data-action="max" aria-label="Развернуть" title="Развернуть"></button>
+            <button class="tb-btn tb-btn--down" data-action="shade" aria-label="Свернуть в заголовок" title="Свернуть в заголовок"></button>
+          </span>
+        </header>
+        <div class="menubar" aria-hidden="true"><span>file</span><span>parametres</span><span>window</span><span>help</span></div>
+
+        <div class="window-body retro-scroll">
+          <h1 class="big">about me</h1>
+
+          <div class="intro">
+            <img class="avatar" src="../portf/av.jpg">
+            <div class="intro-text">
+              <dl class="facts">
+                <div><dt>мария</dt></div>
+                <div><dt>18 лет</dt></div>
+                <div><dt>Санкт-Петербург</dt></div>
+                <div><dt>Jr Software Engineer</dt></div>
+                <div><dt>--------------------------------</dt></div>
+                <div><dt>Студентка направления «Информационные системы и программирование», ориентирована на разработку и проектирование программных систем. Имею практический опыт разработки программных модулей, проектирования баз данных, работы с JS, Java и SQL, создания и оптимизации пользовательских и системных решений. Работала с Linux, знакома с принципами работы операционных систем. Использую ии-инструменты для повышения эффективности решения технических задач. Интересуюсь архитектурой программного обеспечения, автоматизацией процессов и разработкой информационных систем, постоянно расширяю технический стек и стремлюсь к решению нестандартных инженерных задач</dt></div>
+              </dl>
+              <div class="field field--text" data-field="bio"></div>
+            </div>
+          </div>
+
+          <div class="columns">
+            <div>
+              <h2 class="label">навыки: JavaScript, Java, SQL, Linux, GitHub, Git, Modular Programming, OOP, Claude, GitHub Copilot, Adobe Photoshop </h2>
+              <div class="field field--text" data-field="skills"></div>
+              <h2 class="label">языки: английский - upper-intermediate+, немецкий - grundlegende kenntnisse</h2>
+              <div class="field field--text" data-field="languages"></div>
+            </div>
+            <div>
+              <h2 class="label">образование: информационные системы и программирование - хекслет колледж, 2024-28</h2>
+              <div class="field field--text" data-field="education"></div>
+              <h2 class="label">курсы: профессиональные курсы по веб-разработке, 2025–26; курсы по менеджменту в IT, 2025-26; Java-разработчик/Fullstack-разработка, 2026; стандартизация, сертификация, техническое документоведение, 2026</h2>
+              <div class="field field--text" data-field="courses"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="window project" id="project" aria-label="Проект" hidden>
+        <header class="titlebar">
+          <button class="tb-btn" data-action="close" aria-label="Закрыть" title="Закрыть"></button>
+          <span class="title" data-bind="window-title">ПРОЕКТ</span>
+          <span class="tb-group">
+            <button class="tb-btn tb-btn--up" data-action="max" aria-label="Развернуть" title="Развернуть"></button>
+            <button class="tb-btn tb-btn--down" data-action="shade" aria-label="Свернуть в заголовок" title="Свернуть в заголовок"></button>
+          </span>
+        </header>
+        <div class="window-body retro-scroll">
+          <h2 class="project-title" data-bind="title"></h2>
+          <p class="project-desc" data-bind="description"></p>
+          <ul class="tags" data-bind="tags"></ul>
+          <div class="project-links">
+            <a class="open-link" data-bind="link" target="_blank" rel="noopener" hidden>
+              ОТКРЫТЬ GITHUB
+            </a>
+
+            <a class="open-link" href="drinks/index.html" target="_blank" rel="noopener">
+              ОТКРЫТЬ МАГАЗИН
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+
+  <footer class="statusbar">
+    <span class="cell cell--path" id="path"></span>
+    <span class="cell cell--gap"></span>
+    <span class="cell cell--count" id="count"></span>
+  </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
